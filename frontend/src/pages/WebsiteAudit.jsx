@@ -121,17 +121,17 @@ const WebsiteAudit = () => {
         <div className="flex flex-col gap-4">
           <div className="glass-panel flex-col flex">
             <div className="glass-header">Attack Probability</div>
-            <div className="glass-body" style={{ height: '220px', minHeight: '220px', position: 'relative' }}>
-               <ResponsiveContainer width="99%" height="99%">
+            <div className="glass-body" style={{ height: '240px', minHeight: '240px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+               <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
                       data={gaugeData}
                       cx="50%"
-                      cy="80%"
+                      cy="100%"
                       startAngle={180}
                       endAngle={0}
-                      innerRadius={60}
-                      outerRadius={80}
+                      innerRadius={70}
+                      outerRadius={100}
                       paddingAngle={0}
                       dataKey="value"
                     >
@@ -142,9 +142,9 @@ const WebsiteAudit = () => {
                     <Tooltip />
                   </PieChart>
                </ResponsiveContainer>
-               <div style={{ position: 'absolute', bottom: '25%', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 700 }}>{analysis.bruteForceProb}%</div>
-                  <div className="text-xs text-muted">Activity Density</div>
+               <div style={{ position: 'absolute', bottom: '15px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+                  <div style={{ fontSize: '1.75rem', fontWeight: 800, lineHeight: 1 }}>{analysis.bruteForceProb}%</div>
+                  <div className="text-xs text-muted" style={{ marginTop: '4px' }}>Attack Density</div>
                </div>
             </div>
           </div>
@@ -175,15 +175,15 @@ const WebsiteAudit = () => {
         </div>
 
         {/* Real-time Intel Wall */}
-        <div className="glass-panel flex-col flex">
+        <div className="glass-panel flex-col flex" style={{ minHeight: '400px' }}>
           <div className="glass-header flex items-center justify-between">
              <div className="flex items-center gap-2">
                 <Terminal size={18} /> Analyzed Client Intelligence
              </div>
              <div className="text-xs font-normal text-muted">Filtered: Security & Errors only</div>
           </div>
-          <div className="glass-body p-0 overflow-hidden flex-1" style={{ position: 'relative' }}>
-             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, overflowY: 'auto', padding: '16px' }}>
+          <div className="glass-body p-0 overflow-hidden flex-1" style={{ position: 'relative', minHeight: '300px' }}>
+             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, overflowY: 'auto', padding: '20px' }}>
                 {logs.length === 0 ? (
                   <div className="flex items-center gap-3 p-4 glass-panel border-dashed opacity-50">
                     <Info size={20} />
