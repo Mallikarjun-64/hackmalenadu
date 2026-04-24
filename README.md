@@ -2,7 +2,7 @@
 
 > **Built for the Hack Malenadu '26 Cybersecurity Track.**
 
-A real-time, multi-layer threat detection engine that monitors Network, Endpoint, and Application layers to identify, correlate, and automatically generate mitigation playbooks for advanced cyber attacks. 
+A real-time, multi-layer threat detection engine that monitors Network, Endpoint, and Application layers to identify, correlate, and automatically generate mitigation playbooks for advanced cyber attacks.
 
 ## 🌟 Key Features We Built
 
