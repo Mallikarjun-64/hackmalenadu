@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ShieldAlert, LayoutDashboard, Target, BookOpen, Activity, Radio, ShieldCheck } from 'lucide-react';
-
+//sidebar 
 const Sidebar = () => {
   const navItems = [
     { path: '/', label: 'Dashboard', icon: LayoutDashboard },
